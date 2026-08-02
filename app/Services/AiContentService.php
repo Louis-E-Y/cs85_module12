@@ -16,7 +16,7 @@ class AiContentService
         'Content-Type'   => 'application/json',
         ])->post(config('services.gemini.url') . '/models/' . config('services.gemini.model') . ':generateContent', [
         'systemInstruction' => [
-            'parts' => [['text' => 'You are a friendly writing assistant.']],
+            'parts' => [['text' => 'You are an AI writing assistant.']],
         ],
         'contents' => [
             ['parts' => [['text' => $prompt]]],
